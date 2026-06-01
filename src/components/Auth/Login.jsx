@@ -1,7 +1,13 @@
+import { useState } from "react";
+
 const Login = () => {
-  const handleLoginSubmit = (e) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const formHandler = (e) => {
     e.preventDefault();
-    console.log("Hello beloved people!");
+    console.log("User credentials are ok.");
+    setEmail("");
+    setPassword("");
   };
   return (
     <div className="flex h-screen w-screen items-center justify-center">
@@ -10,21 +16,29 @@ const Login = () => {
         <form
           className="flex flex-col items-center justify-center gap-6"
           onSubmit={(e) => {
-            handleLoginSubmit(e);
+            formHandler(e);
           }}
         >
           {/* Fields */}
           <input
-            className="outline-none border-b text-gray-400 border-gray-400 px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200"
+            className={`outline-none border-b  ${email.trim() === "" ? "text-gray-400 border-gray-400" : "text-emerald-400 border-emerald-400"} px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200`}
             type="email"
             placeholder="Enter your email"
             required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
           <input
-            className="outline-none border-b text-gray-400 border-gray-400 px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200"
+            className={`outline-none border-b ${password.trim() === "" ? "text-gray-400 border-gray-400" : "text-emerald-400 border-emerald-400"} px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200`}
             type="password"
             placeholder="Enter password"
             required
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           {/* Buttons */}
           <div className="mt-4 w-full flex gap-3 px-2">
