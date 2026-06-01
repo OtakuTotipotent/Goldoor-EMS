@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <>
-      <div className="flex justify-between items-center p-4 border-b border-emerald-400/10">
+      <div className="flex justify-between items-center p-4 border-b border-gray-400/10">
         <h1 className="leading-tight">
           Hello,
           <br />
