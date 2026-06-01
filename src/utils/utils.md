@@ -1,0 +1,1 @@
+# Pure JavaScript helper functions

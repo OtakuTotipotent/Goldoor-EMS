@@ -1,4 +1,4 @@
-import Header from "../others/Header";
+import Header from "../../others/Header";
 
 const EmployeeDashboard = () => {
   return (
