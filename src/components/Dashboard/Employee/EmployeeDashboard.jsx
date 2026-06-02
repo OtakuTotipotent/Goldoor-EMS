@@ -1,4 +1,5 @@
 import Header from "../../Elements/Header";
+import TaskList from "../../Tasks/TaskList";
 import InsightsCard from "./InsightsCard";
 
 const EmployeeDashboard = () => {
@@ -6,6 +7,7 @@ const EmployeeDashboard = () => {
     <div>
       <Header />
       <InsightsCard />
+      <TaskList />
     </div>
   );
 };
