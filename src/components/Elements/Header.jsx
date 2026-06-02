@@ -8,7 +8,7 @@ const Header = () => {
           <span className="text-2xl text-emerald-500">User</span>
           👋
         </h1>
-        <button className="cursor-pointer border border-white px-2.5 py-1 rounded-lg opacity-70 hover:text-red-400 hover:border-red-400 transition-colors">
+        <button className="cursor-pointer border px-2.5 py-1 rounded-lg opacity-70 text-red-400 border-red-400 hover:opacity-50 transition-opacity">
           Log Out
         </button>
       </div>
