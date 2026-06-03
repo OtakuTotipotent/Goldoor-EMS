@@ -2,6 +2,7 @@ const CreateTask = () => {
   return (
     <div className="md:w-8/12 m-auto mt-8 md:mt-15 px-10 md:px-0">
       <h2 className="font-bold text-emerald-500 text-3xl my-8">Admin Panel</h2>
+      {/* Buttons */}
       <div className="border-y border-emerald-500 rounded-sm p-5 grid gap-4">
         <div className="flex gap-4">
           <button className="border border-emerald-500 rounded-full px-4 py-2 text-gray-300 hover:opacity-70 cursor-pointer">
@@ -20,6 +21,7 @@ const CreateTask = () => {
           </button>
         </div>
       </div>
+      {/* Create From */}
       <form className="mt-10 p-4 bg-gray-950/20 rounded-lg grid gap-5 md:grid-cols-2 md:gap-5">
         <div className="grid gap-6">
           <div className="grid gap-3">
@@ -79,6 +81,7 @@ const CreateTask = () => {
             />
           </div>
         </div>
+        {/* Button */}
         <div className="grid gap-6 md:flex md:flex-col">
           <div className="grid gap-3">
             <label
