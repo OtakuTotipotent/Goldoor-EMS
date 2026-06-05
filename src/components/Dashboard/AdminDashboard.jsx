@@ -1,6 +1,6 @@
-import Header from "../../Elements/Header";
-import AllTasks from "./AllTasks";
-import CreateTask from "./CreateTask";
+import Header from "../Elements/Header";
+import AllTasks from "../Elements/AllTasks";
+import CreateTask from "../Elements/CreateTask";
 
 const AdminDashboard = () => {
   return (
