@@ -1,16 +1,19 @@
 import { useState } from "react";
 
-const Login = () => {
+const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const formHandler = (e) => {
     e.preventDefault();
-    console.log("User credentials are ok.");
+    handleLogin(email, password);
     setEmail("");
     setPassword("");
   };
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="flex h-screen w-screen flex-col items-center justify-center gap-10">
+      <h1 className="font-semibold text-emerald-400 cursor-default select-none underline underline-offset-10">
+        EMS: All in One System!
+      </h1>
       <div className="border-2 border-emerald-600 px-8 py-12 rounded-lg">
         {/* Auth Form */}
         <form
