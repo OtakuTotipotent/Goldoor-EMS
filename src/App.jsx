@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import Login from "./components/Auth/Login";
+import AdminDashboard from "./components/Dashboard/Admin/AdminDashboard";
+import EmployeeDashboard from "./components/Dashboard/Employee/EmployeeDashboard";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -20,8 +22,7 @@ const App = () => {
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ""}
-      {/* <EmployeeDashboard /> */}
-      {/* <AdminDashboard /> */}
+      {user == "admin" ? <AdminDashboard /> : <EmployeeDashboard />}
     </>
   );
 };
