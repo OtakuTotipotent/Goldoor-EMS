@@ -2,12 +2,12 @@ import Header from "../Elements/Header";
 import TaskList from "../Tasks/TaskList";
 import InsightsCard from "../Elements/InsightsCard";
 
-const EmployeeDashboard = () => {
+const EmployeeDashboard = ({ data }) => {
   return (
     <div>
-      <Header />
-      <InsightsCard />
-      <TaskList />
+      <Header data={data} />
+      <InsightsCard data={data} />
+      <TaskList data={data} />
     </div>
   );
 };

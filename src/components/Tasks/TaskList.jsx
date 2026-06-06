@@ -1,4 +1,4 @@
-const TaskList = () => {
+const TaskList = ({ data }) => {
   return (
     <div
       id="taskList"

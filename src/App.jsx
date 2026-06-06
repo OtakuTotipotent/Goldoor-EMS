@@ -13,7 +13,7 @@ const App = () => {
     if (storedUser) {
       try {
         const loggedInUser = JSON.parse(storedUser);
-        return loggedInUser.role;
+        return loggedInUser;
       } catch (error) {
         console.error("Failed to parse user from local storage:", error);
         return null;
@@ -49,7 +49,15 @@ const App = () => {
     return <Login handleLogin={handleLogin} />;
   }
 
-  return <>{user === "admin" ? <AdminDashboard /> : <EmployeeDashboard />}</>;
+  return (
+    <>
+      {user.role === "admin" ? (
+        <AdminDashboard data={user} />
+      ) : (
+        <EmployeeDashboard data={user} />
+      )}
+    </>
+  );
 };
 
 export default App;

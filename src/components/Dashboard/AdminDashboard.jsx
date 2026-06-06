@@ -2,12 +2,12 @@ import Header from "../Elements/Header";
 import AllTasks from "../Elements/AllTasks";
 import CreateTask from "../Elements/CreateTask";
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ data }) => {
   return (
     <div>
-      <Header />
-      <CreateTask />
-      <AllTasks />
+      <Header data={data} />
+      <CreateTask data={data} />
+      <AllTasks data={data} />
     </div>
   );
 };
