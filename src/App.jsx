@@ -8,13 +8,18 @@ const App = () => {
   // Data retrieval
   // setLocalStorage();
   const authData = useContext(AuthContext);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    const loggedUser = localStorage.getItem("loggedInUser");
+    if (loggedUser) {
+      return JSON.parse(loggedUser);
+    } else return null;
+  });
   const [activeUserData, setActiveUserData] = useState(null);
 
   // Login methods
   const handleLogin = (email, password) => {
     if (email == "admin1@gmail.com" && password == "321") {
-      setUser("admin");
+      setUser({ role: "admin" });
       // setActiveUserData(admin);
       localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin" }));
     } else if (authData) {
@@ -22,7 +27,7 @@ const App = () => {
         (e) => email == e.email && password == e.password,
       );
       if (employee) {
-        setUser("employee");
+        setUser({ role: "employee" });
         setActiveUserData(employee);
         localStorage.setItem(
           "loggedInUser",
@@ -35,15 +40,15 @@ const App = () => {
   };
 
   // Components
+  if (!user) {
+    return <Login handleLogin={handleLogin} />;
+  }
   return (
     <>
-      {!user ? <Login handleLogin={handleLogin} /> : ""}
-      {user == "admin" ? (
+      {user.role === "admin" ? (
         <AdminDashboard />
-      ) : user == "employee" ? (
-        <EmployeeDashboard data={activeUserData} />
       ) : (
-        ""
+        <EmployeeDashboard data={activeUserData} />
       )}
     </>
   );

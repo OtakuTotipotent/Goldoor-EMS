@@ -17,15 +17,16 @@ export default function Login({ handleLogin }) {
       <div className="border-2 border-emerald-600 px-8 py-12 rounded-lg">
         {/* Auth Form */}
         <form
-          className="flex flex-col items-center justify-center gap-6"
+          className="flex flex-col items-center justify-center gap-6 group-autofill:text-emerald-400 group-autofill:bg-transparent"
           onSubmit={(e) => {
             formHandler(e);
           }}
         >
           {/* Fields */}
           <input
-            className={`outline-none border-b  ${email.trim() === "" ? "text-gray-400 border-gray-400" : "text-emerald-400 border-emerald-400"} px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200`}
+            className={`outline-none border-b  ${email.trim() === "" ? "text-gray-400 border-gray-400" : "text-emerald-400 border-emerald-400"} px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200 autofill:text-emerald-400 autofill:bg-transparent`}
             type="email"
+            name="email"
             placeholder="Enter your email"
             required
             value={email}
@@ -34,8 +35,9 @@ export default function Login({ handleLogin }) {
             }}
           />
           <input
-            className={`outline-none border-b ${password.trim() === "" ? "text-gray-400 border-gray-400" : "text-emerald-400 border-emerald-400"} px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200`}
+            className={`outline-none border-b ${password.trim() === "" ? "text-gray-400 border-gray-400" : "text-emerald-400 border-emerald-400"} px-3 py-1.5 hover:border-emerald-400 focus:border-emerald-400 focus:text-emerald-400 transition-colors duration-200 autofill:text-emerald-400 autofill:bg-transparent`}
             type="password"
+            name="password"
             placeholder="Enter password"
             required
             value={password}
