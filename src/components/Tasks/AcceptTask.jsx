@@ -1,5 +1,3 @@
-const AcceptTask = () => {
+export default function AcceptTask() {
   return <div>AcceptTask</div>;
-};
-
-export default AcceptTask;
+}

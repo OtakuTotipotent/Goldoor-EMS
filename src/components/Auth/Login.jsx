@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Login = ({ handleLogin }) => {
+export default function Login({ handleLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const formHandler = (e) => {
@@ -56,6 +56,4 @@ const Login = ({ handleLogin }) => {
       </div>
     </div>
   );
-};
-
-export default Login;
+}

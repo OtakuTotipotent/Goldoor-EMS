@@ -1,13 +1,13 @@
 import Header from "../Elements/Header";
-import AllTasks from "../Elements/AllTasks";
-import CreateTask from "../Elements/CreateTask";
+import AdminTasksList from "../Tasks/AdminTasksList";
+import CreateTask from "../Tasks/CreateTask";
 
-const AdminDashboard = ({ data }) => {
+const AdminDashboard = () => {
   return (
     <div>
-      <Header data={data} />
-      <CreateTask data={data} />
-      <AllTasks data={data} />
+      <Header />
+      <CreateTask />
+      <AdminTasksList />
     </div>
   );
 };

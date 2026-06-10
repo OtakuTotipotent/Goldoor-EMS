@@ -1,5 +1,3 @@
-const NewTask = () => {
+export default function NewTask() {
   return <div>NewTask</div>;
-};
-
-export default NewTask;
+}

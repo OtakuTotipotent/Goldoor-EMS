@@ -1,13 +1,13 @@
 import Header from "../Elements/Header";
-import TaskList from "../Tasks/TaskList";
-import InsightsCard from "../Elements/InsightsCard";
+import TaskInsights from "../Tasks/TaskInsights";
+import EmployeeTaskList from "../Tasks/EmployeeTaskList";
 
 const EmployeeDashboard = ({ data }) => {
   return (
     <div>
       <Header data={data} />
-      <InsightsCard data={data} />
-      <TaskList data={data} />
+      <TaskInsights />
+      <EmployeeTaskList />
     </div>
   );
 };

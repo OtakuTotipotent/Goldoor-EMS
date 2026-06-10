@@ -1,4 +1,4 @@
-const TaskList = ({ data }) => {
+export default function EmployeeTasksList() {
   return (
     <div
       id="taskList"
@@ -29,6 +29,4 @@ const TaskList = ({ data }) => {
       </div>
     </div>
   );
-};
-
-export default TaskList;
+}
