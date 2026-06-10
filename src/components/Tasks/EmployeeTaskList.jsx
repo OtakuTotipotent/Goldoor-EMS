@@ -1,4 +1,4 @@
-export default function EmployeeTasksList() {
+export default function EmployeeTasksList({ data }) {
   return (
     <div
       id="taskList"

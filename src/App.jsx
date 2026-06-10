@@ -6,6 +6,7 @@ import { AuthContext } from "./context/AuthProvider";
 
 const App = () => {
   // Data retrieval
+  // setLocalStorage();
   const authData = useContext(AuthContext);
   const [user, setUser] = useState(null);
   const [activeUserData, setActiveUserData] = useState(null);

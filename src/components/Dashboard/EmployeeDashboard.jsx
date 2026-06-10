@@ -6,8 +6,8 @@ const EmployeeDashboard = ({ data }) => {
   return (
     <div>
       <Header data={data} />
-      <TaskInsights />
-      <EmployeeTaskList />
+      <TaskInsights data={data} />
+      <EmployeeTaskList data={data} />
     </div>
   );
 };
