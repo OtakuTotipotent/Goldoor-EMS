@@ -5,7 +5,7 @@ const employees = [
     username: "ali_dev",
     email: "employee1@gmail.com",
     password: "123",
-    taskCounts: { active: 2, newTask: 1, completed: 1, failed: 0 },
+    taskCounts: { active: 2, newTask: 1, completed: 1, failed: 0, accepted: 1 },
     tasks: [
       {
         active: true,
@@ -48,7 +48,7 @@ const employees = [
     username: "ayesha_design",
     email: "employee2@gmail.com",
     password: "123",
-    taskCounts: { active: 2, newTask: 1, completed: 1, failed: 1 },
+    taskCounts: { active: 2, newTask: 1, completed: 1, failed: 1, accepted: 1 },
     tasks: [
       {
         active: true,
@@ -102,7 +102,7 @@ const employees = [
     username: "zain_qa",
     email: "employee3@gmail.com",
     password: "123",
-    taskCounts: { active: 3, newTask: 2, completed: 2, failed: 0 },
+    taskCounts: { active: 3, newTask: 2, completed: 2, failed: 0, accepted: 2 },
     tasks: [
       {
         active: true,
@@ -167,7 +167,7 @@ const employees = [
     username: "fatima_data",
     email: "employee4@gmail.com",
     password: "123",
-    taskCounts: { active: 1, newTask: 1, completed: 2, failed: 0 },
+    taskCounts: { active: 1, newTask: 1, completed: 2, failed: 0, accepted: 2 },
     tasks: [
       {
         active: true,
@@ -210,7 +210,7 @@ const employees = [
     username: "bilal_sys",
     email: "employee5@gmail.com",
     password: "123",
-    taskCounts: { active: 2, newTask: 1, completed: 1, failed: 0 },
+    taskCounts: { active: 2, newTask: 1, completed: 1, failed: 0, accepted: 1 },
     tasks: [
       {
         active: true,
