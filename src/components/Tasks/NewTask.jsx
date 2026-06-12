@@ -1,4 +1,4 @@
-export default function NewTask() {
+const NewTask = () => {
   return (
     <div className="md:h-full h-48 basis-md shrink-0 bg-gray-950 hover:bg-black transition-colors rounded-xl p-4 grid gap-4 items-start place-content-start">
       <div className="flex justify-between items-center">
@@ -27,4 +27,6 @@ export default function NewTask() {
       </div>
     </div>
   );
-}
+};
+
+export default NewTask;

@@ -1,4 +1,4 @@
-export default function CreateTask() {
+const CreateTask = () => {
   return (
     <div className="md:w-8/12 m-auto mt-8 md:mt-15 px-10 md:px-0">
       <h2 className="font-bold text-emerald-500 text-3xl my-8">Admin Panel</h2>
@@ -105,4 +105,5 @@ export default function CreateTask() {
       </form>
     </div>
   );
-}
+};
+export default CreateTask;

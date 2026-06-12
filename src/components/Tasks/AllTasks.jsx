@@ -1,4 +1,4 @@
-export default function AdminTasksList() {
+const AllTasks = () => {
   return (
     <div className="p-5 md:w-8/12 md:m-auto mt-8 mx-8 md:mt-15 px-10 md:px-0">
       <h2 className="text-emerald-500 p-2">All Tasks</h2>
@@ -23,4 +23,6 @@ export default function AdminTasksList() {
       </div>
     </div>
   );
-}
+};
+
+export default AllTasks

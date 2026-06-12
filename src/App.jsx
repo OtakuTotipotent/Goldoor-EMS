@@ -5,30 +5,22 @@ import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import { AuthContext } from "./context/AuthProvider";
 
 const App = () => {
-  // Data retrieval
-  // setLocalStorage();
+  const [user, setUser] = useState(null);
+  const [loggedInUserData, setLoggedInUserData] = useState(null);
   const authData = useContext(AuthContext);
-  const [user, setUser] = useState(() => {
-    const loggedUser = localStorage.getItem("loggedInUser");
-    if (loggedUser) {
-      return JSON.parse(loggedUser);
-    } else return null;
-  });
-  const [activeUserData, setActiveUserData] = useState(null);
 
   // Login methods
   const handleLogin = (email, password) => {
     if (email == "admin1@gmail.com" && password == "321") {
-      setUser({ role: "admin" });
-      // setActiveUserData(admin);
+      setUser("admin");
       localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin" }));
     } else if (authData) {
       const employee = authData.employees.find(
-        (e) => email == e.email && password == e.password,
+        (e) => email == e.email && e.password == password,
       );
       if (employee) {
-        setUser({ role: "employee" });
-        setActiveUserData(employee);
+        setUser("employee");
+        setLoggedInUserData(employee);
         localStorage.setItem(
           "loggedInUser",
           JSON.stringify({ role: "employee" }),
@@ -40,15 +32,15 @@ const App = () => {
   };
 
   // Components
-  if (!user) {
-    return <Login handleLogin={handleLogin} />;
-  }
   return (
     <>
-      {user.role === "admin" ? (
+      {!user ? <Login handleLogin={handleLogin} /> : ""}
+      {user == "admin" ? (
         <AdminDashboard />
+      ) : user == "employee" ? (
+        <EmployeeDashboard data={loggedInUserData} />
       ) : (
-        <EmployeeDashboard data={activeUserData} />
+        ""
       )}
     </>
   );

@@ -1,5 +1,5 @@
 import Header from "../Elements/Header";
-import AdminTasksList from "../Tasks/AdminTasksList";
+import AllTasks from "../Tasks/AllTasks";
 import CreateTask from "../Tasks/CreateTask";
 
 const AdminDashboard = () => {
@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     <div>
       <Header />
       <CreateTask />
-      <AdminTasksList />
+      <AllTasks />
     </div>
   );
 };

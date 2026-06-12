@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export default function Login({ handleLogin }) {
+const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const formHandler = (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     handleLogin(email, password);
     setEmail("");
@@ -19,7 +19,7 @@ export default function Login({ handleLogin }) {
         <form
           className="flex flex-col items-center justify-center gap-6 group-autofill:text-emerald-400 group-autofill:bg-transparent"
           onSubmit={(e) => {
-            formHandler(e);
+            submitHandler(e);
           }}
         >
           {/* Fields */}
@@ -58,4 +58,6 @@ export default function Login({ handleLogin }) {
       </div>
     </div>
   );
-}
+};
+
+export default Login;

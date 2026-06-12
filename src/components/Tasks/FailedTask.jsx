@@ -1,4 +1,4 @@
-export default function FailedTask() {
+const FailedTask = () => {
   return (
     <div className="md:h-full h-48 basis-md shrink-0 bg-gray-950 hover:bg-black transition-colors rounded-xl p-4 grid gap-4 items-start place-content-start">
       <div className="flex justify-between items-center">
@@ -28,4 +28,6 @@ export default function FailedTask() {
       </div>
     </div>
   );
-}
+};
+
+export default FailedTask;

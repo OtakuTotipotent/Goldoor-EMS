@@ -3,7 +3,7 @@ import NewTask from "./NewTask";
 import CompleteTask from "./CompleteTask";
 import FailedTask from "./FailedTask";
 
-export default function EmployeeTasksList() {
+const TaskList = () => {
   return (
     <div
       id="taskList"
@@ -15,4 +15,6 @@ export default function EmployeeTasksList() {
       <FailedTask />
     </div>
   );
-}
+};
+
+export default TaskList;
