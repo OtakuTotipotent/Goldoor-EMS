@@ -9,18 +9,18 @@ const TaskList = ({ data }) => {
       id="taskList"
       className="p-2 m-5 mt-10 h-96 grid md:flex md:justify-between gap-1 overflow-x-auto scroll-smooth"
     >
-      {data.tasks.map((elem) => {
+      {data.tasks.map((elem, index) => {
         if (elem.active) {
-          return <AcceptTask />;
+          return <AcceptTask key={index} />;
         }
         if (elem.newTask) {
-          return <NewTask />;
+          return <NewTask key={index} />;
         }
         if (elem.completed) {
-          return <CompleteTask />;
+          return <CompleteTask key={index} />;
         }
         if (elem.failed) {
-          return <FailedTask />;
+          return <FailedTask key={index} />;
         }
       })}
     </div>
