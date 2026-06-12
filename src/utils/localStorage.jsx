@@ -5,7 +5,7 @@ const employees = [
     username: "ali_dev",
     email: "employee1@gmail.com",
     password: "123",
-    taskCounts: { active: 2, newTask: 1, completed: 1, failed: 0, accepted: 1 },
+    taskCounts: { active: 2, newTask: 1, completed: 4, failed: 1, accepted: 3 },
     tasks: [
       {
         active: true,
@@ -17,6 +17,7 @@ const employees = [
           "Configure GitHub Actions to automate the testing and deployment workflow. Ensure that code coverage metrics are generated and attached to pull requests.",
         date: "2026-06-15",
         category: "DevOps",
+        priority: "High",
       },
       {
         active: true,
@@ -28,6 +29,7 @@ const employees = [
           "Investigate reporting dashboards causing memory usage spikes in production. Optimize data parsing algorithms and clean up unused event listeners.",
         date: "2026-06-12",
         category: "Backend",
+        priority: "Low",
       },
       {
         active: false,
@@ -39,6 +41,7 @@ const employees = [
           "Document the newly introduced authentication endpoints in Postman and Swagger. Ensure request and response schemas accurately reflect current production versions.",
         date: "2026-06-05",
         category: "Documentation",
+        priority: "Medium",
       },
     ],
   },
@@ -60,6 +63,7 @@ const employees = [
           "Migrate the legacy user profile layouts from Bootstrap components to Tailwind utility classes. Ensure full responsiveness across standard mobile and desktop viewports.",
         date: "2026-06-20",
         category: "Frontend",
+        priority: "High",
       },
       {
         active: true,
@@ -71,6 +75,7 @@ const employees = [
           "Create high-fidelity wireframes for the user onboarding flow based on recent UX research. Iterate on user feedback regarding navigation layout complexity.",
         date: "2026-06-18",
         category: "UI/UX",
+        priority: "Low",
       },
       {
         active: false,
@@ -82,6 +87,7 @@ const employees = [
           "Batch export updated marketing SVG iconography and user avatars for frontend integration. Organize assets within the shared Google Drive folder structure.",
         date: "2026-06-03",
         category: "Design",
+        priority: "Medium",
       },
       {
         active: false,
@@ -114,6 +120,7 @@ const employees = [
           "Develop automated end-to-end regression test scripts utilizing Playwright for the checkout funnel. Run tests against staging environments to identify latency bottlenecks.",
         date: "2026-06-14",
         category: "QA Automation",
+        priority: "High",
       },
       {
         active: true,
@@ -125,6 +132,7 @@ const employees = [
           "Perform vulnerability scans on external dependency packages using npm audit and Snyk tools. Document potential entry vectors and suggest dependency upgrades.",
         date: "2026-06-25",
         category: "Security",
+        priority: "Low",
       },
       {
         active: true,
@@ -136,6 +144,7 @@ const employees = [
           "Execute compatibility validations for the main dashboard across Safari, Edge, and mobile Chrome browsers. Document UI misalignment errors into Jira.",
         date: "2026-06-11",
         category: "QA Manual",
+        priority: "High",
       },
       {
         active: false,
@@ -147,6 +156,7 @@ const employees = [
           "Manually retest user password reset requests to ensure tokens expire properly after fifteen minutes. Close corresponding task tickets upon successful outcome tracking.",
         date: "2026-06-04",
         category: "QA Manual",
+        priority: "Medium",
       },
       {
         active: false,
@@ -158,6 +168,7 @@ const employees = [
           "Configure automated night build test suites to execute at midnight. Ensure Slack status updates alert engineering squads regarding build failures.",
         date: "2026-06-02",
         category: "DevOps",
+        priority: "Low",
       },
     ],
   },
@@ -179,6 +190,7 @@ const employees = [
           "Refactor nested analytical join queries inside historical sales database procedures. Implement index structures to significantly decrease overall application response latencies.",
         date: "2026-06-19",
         category: "Database",
+        priority: "High",
       },
       {
         active: false,
@@ -190,6 +202,7 @@ const employees = [
           "Coordinate with backend engineers to run the database structural update migrations during low-traffic windows. Back up active tables prior to execution.",
         date: "2026-06-05",
         category: "Database",
+        priority: "High",
       },
       {
         active: false,
@@ -201,6 +214,7 @@ const employees = [
           "Compile and analyze transactional data sets to formulate comprehensive quarterly revenue presentations. Distribute clean visual charts to department leads.",
         date: "2026-06-03",
         category: "Data Analysis",
+        priority: "Low",
       },
     ],
   },
@@ -222,6 +236,7 @@ const employees = [
           "Provision AWS staging server containers utilizing Terraform architecture components. Ensure VPC networking permissions strictures conform to standard company practices.",
         date: "2026-06-22",
         category: "Cloud Infrastructure",
+        priority: "Medium",
       },
       {
         active: true,
@@ -233,6 +248,7 @@ const employees = [
           "Renew expiring production wildcard secure layer certificates utilizing Let's Encrypt tooling mechanisms. Test connections across endpoint configurations to prevent downtime.",
         date: "2026-06-10",
         category: "SysOps",
+        priority: "Low",
       },
       {
         active: false,
@@ -244,6 +260,7 @@ const employees = [
           "Audit physical office asset allocations including distributed development laptops and secondary monitors. Log serialized asset values in the global inventory repository.",
         date: "2026-06-04",
         category: "IT Support",
+        priority: "Low",
       },
     ],
   },
