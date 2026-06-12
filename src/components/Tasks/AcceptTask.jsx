@@ -23,8 +23,12 @@ const AcceptTask = () => {
         </p>
       </div>
       <div className="flex gap-2 justify-center items-center">
-        <button>Mark as Completed</button>
-        <button>Mark as Failed</button>
+        <button className="border border-gray-500 px-2 py-1 rounded-md text-gray-400 cursor-pointer hover:text-gray-300 transition">
+          Mark as Completed
+        </button>
+        <button className="border border-gray-500 px-2 py-1 rounded-md text-gray-400 cursor-pointer hover:text-gray-300 transition">
+          Mark as Failed
+        </button>
       </div>
     </div>
   );

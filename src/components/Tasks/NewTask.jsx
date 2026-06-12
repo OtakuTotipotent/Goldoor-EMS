@@ -23,7 +23,9 @@ const NewTask = () => {
         </p>
       </div>
       <div className="flex gap-2 justify-center items-center">
-        <button>Accept Task</button>
+        <button className="border border-gray-500 px-2 py-1 rounded-md text-gray-400 cursor-pointer hover:text-gray-300 transition">
+          Accept Task
+        </button>
       </div>
     </div>
   );
