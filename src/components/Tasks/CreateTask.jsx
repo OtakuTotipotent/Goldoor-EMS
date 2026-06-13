@@ -1,7 +1,31 @@
+import { useState } from "react";
+
 const CreateTask = () => {
+  const [taskTitle, setTaskTitle] = useState("");
+  const [taskDescription, setTaskDescription] = useState("");
+  const [taskDate, setTaskDate] = useState("");
+  const [assignTo, setAssignTo] = useState("");
+  const [taskCategory, setTaskCategory] = useState("");
+
+  const [task, setTask] = useState({});
+
   const submitHandler = (e) => {
     e.preventDefault();
+
+    setTask({
+      taskTitle,
+      taskDescription,
+      taskDate,
+      taskCategory,
+      active: false,
+      newTask: true,
+      failed: false,
+      completed: false,
+    });
+
+    console.log(task);
   };
+
   return (
     <div className="md:w-8/12 m-auto mt-8 md:mt-15 px-10 md:px-0">
       <h2 className="font-bold text-emerald-500 text-3xl my-8">Admin Panel</h2>
@@ -26,7 +50,9 @@ const CreateTask = () => {
       </div>
       {/* Create From */}
       <form
-        onSubmit={(e) => submitHandler(e)}
+        onSubmit={(e) => {
+          submitHandler(e);
+        }}
         className="mt-10 p-4 bg-gray-950/20 rounded-lg grid gap-5 md:grid-cols-2 md:gap-5"
       >
         <div className="grid gap-6">
@@ -38,6 +64,9 @@ const CreateTask = () => {
               Task Title
             </label>
             <input
+              value={taskTitle}
+              onChange={(e) => setTaskTitle(e.target.value)}
+              required
               className="outline-none bg-gray-900 w-full px-5 py-1 text-md text-gray-300 rounded-md"
               type="text"
               name="title"
@@ -52,6 +81,9 @@ const CreateTask = () => {
               Due Date
             </label>
             <input
+              value={taskDate}
+              onChange={(e) => setTaskDate(e.target.value)}
+              required
               className="outline-none bg-gray-900 w-full px-5 py-1 text-md text-gray-300 rounded-md"
               type="date"
               name="date"
@@ -66,6 +98,9 @@ const CreateTask = () => {
               Assign To
             </label>
             <input
+              value={assignTo}
+              onChange={(e) => setAssignTo(e.target.value)}
+              required
               className="outline-none bg-gray-900 w-full px-5 py-1 text-md text-gray-300 rounded-md"
               type="text"
               name="employee"
@@ -80,6 +115,9 @@ const CreateTask = () => {
               Category
             </label>
             <input
+              value={taskCategory}
+              onChange={(e) => setTaskCategory(e.target.value)}
+              required
               className="outline-none bg-gray-900 w-full px-5 py-1 text-md text-gray-300 rounded-md"
               type="text"
               name="category"
@@ -97,6 +135,9 @@ const CreateTask = () => {
               Description
             </label>
             <textarea
+              value={taskDescription}
+              onChange={(e) => setTaskDescription(e.target.value)}
+              required
               className="outline-none bg-gray-900 w-full px-5 py-2 text-md text-gray-300 rounded-md h-28 md:h-52"
               name="description"
               id="description"
