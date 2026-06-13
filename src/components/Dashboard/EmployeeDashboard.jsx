@@ -2,12 +2,12 @@ import Header from "../Elements/Header";
 import TaskListNumbers from "../Tasks/TaskListNumbers";
 import TaskList from "../Tasks/TaskList";
 
-const EmployeeDashboard = ({ data }) => {
+const EmployeeDashboard = (props) => {
   return (
     <div>
-      <Header data={data} />
-      <TaskListNumbers data={data} />
-      <TaskList data={data} />
+      <Header changeUser={props.changeUser} data={props.data} />
+      <TaskListNumbers data={props.data} />
+      <TaskList data={props.data} />
     </div>
   );
 };
