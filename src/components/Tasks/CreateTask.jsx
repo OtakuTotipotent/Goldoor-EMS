@@ -1,4 +1,7 @@
 const CreateTask = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="md:w-8/12 m-auto mt-8 md:mt-15 px-10 md:px-0">
       <h2 className="font-bold text-emerald-500 text-3xl my-8">Admin Panel</h2>
@@ -22,7 +25,10 @@ const CreateTask = () => {
         </div>
       </div>
       {/* Create From */}
-      <form className="mt-10 p-4 bg-gray-950/20 rounded-lg grid gap-5 md:grid-cols-2 md:gap-5">
+      <form
+        onSubmit={(e) => submitHandler(e)}
+        className="mt-10 p-4 bg-gray-950/20 rounded-lg grid gap-5 md:grid-cols-2 md:gap-5"
+      >
         <div className="grid gap-6">
           <div className="grid gap-3">
             <label
